@@ -1,0 +1,20 @@
+Intended outcomes:
+
+1) Provide accessor and modification methods - get, put, post, patch, delete
+    Employee - getAll, getById, who supervises who
+    Project - getAll, getById, get ongoing projects, add project, modify project
+    Client - getAll, getById, add client
+
+    Homerconsulting
+        - get employee assignments,
+        - get project assignments,
+        - add training for employee
+        - calculate employee bonus
+        - get employees per department
+2) Separation of business and implementation details
+3) Business use cases -
+    - Training information on employees
+    - Ongoing projects
+    - Employee bonus
+
+4) Follow REST standards
