@@ -47,12 +47,21 @@ public class ProjectService {
         } else throw new IllegalArgumentException("Project with name '" + project.getName() + "' already exists!");
     }
 
-    private boolean validateProject(Integer id) {
+    public ProjectBO updateProject(int id, double totalCost) throws IllegalArgumentException{
+        boolean exists = validateProject(id);
+        if (exists) {
+            Project project = projectDao.findOne(id);
+            project.setTotalCost(totalCost);
+            return convertToBO(projectDao.save(project));
+        } else throw  new IllegalArgumentException("Project with id '" + id + "' does not exist");
+    }
+
+    public boolean validateProject(Integer id) {
         Project project = projectDao.findOne(id);
         return project != null;
     }
 
-    private boolean validateProject(String name) {
+    public boolean validateProject(String name) {
         Project project = projectDao.findByName(name);
         return project != null;
     }

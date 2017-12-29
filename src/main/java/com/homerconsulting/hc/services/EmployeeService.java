@@ -27,6 +27,10 @@ public class EmployeeService {
         return Optional.ofNullable(employee).map(this::convertToBO);
     }
 
+    public Optional<Employee> getEmployeeEntity(int id) {
+        return Optional.ofNullable(employeeDao.findOne(id));
+    }
+
     public Collection<EmployeeBO> getEmployeesSupervisedBy(int id) throws NoSuchElementException{
         Employee employee = employeeDao.findOne(id);
         if (employee != null) {
@@ -37,7 +41,7 @@ public class EmployeeService {
         } else throw new NoSuchElementException("No such employee with id - " + id);
     }
 
-    private EmployeeBO convertToBO(Employee employee) {
+    public EmployeeBO convertToBO(Employee employee) {
         return EmployeeBO.builder()
                 .empID(employee.getEmpID())
                 .empLast(employee.getEmpLast())
