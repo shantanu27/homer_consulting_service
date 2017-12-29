@@ -1,0 +1,160 @@
+-- SKILL Table
+
+INSERT INTO Skill VALUES(01, 'Presentation');
+INSERT INTO Skill VALUES(02, 'Negotiation');
+INSERT INTO Skill VALUES(03, 'Python');
+INSERT INTO Skill VALUES(04, 'Technical Writing');
+INSERT INTO Skill VALUES(05, 'Project Management');
+INSERT INTO Skill VALUES(06, 'R');
+INSERT INTO Skill VALUES(07, 'MySQL');
+
+-- DEPARTMENT Table
+
+INSERT INTO Department (dept_code, name, location, phone, manager_id) VALUES(01, 'Administration', 'Pittsburgh', '412-111-0099', NULL);
+INSERT INTO Department (dept_code, name, location, phone, manager_id) VALUES(02, 'Marketing', 'New York', '724-312-1990', NULL);
+INSERT INTO Department (dept_code, name, location, phone, manager_id) VALUES(03, 'IT', 'Pittsburgh', '412-655-9845', NULL);
+INSERT INTO Department (dept_code, name, location, phone, manager_id) VALUES(04, 'Human Resources', 'Pittsburgh', '412-986-0032', NULL);
+INSERT INTO Department (dept_code, name, location, phone, manager_id) VALUES(05, 'Research and Development', 'Boston', '617-225-5758', NULL);
+INSERT INTO Department (dept_code, name, location, phone, manager_id) VALUES(06, 'Accounting', 'New York', '724-312-1923', NULL);
+
+-- EMPLOYEE Table
+
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(001, 'Olson', 'Kevin', '1960-08-22', '2001-12-10', NULL, 01);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(102, 'Taylor', 'Bruck', '1959-03-03', '2010-01-21', 001, 02);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(104, 'Evette', 'Sultani', '1970-07-15', '2001-12-10', 001, 03);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(106, 'Taylor', 'James', '1975-04-03', '2010-08-09', 001, 04);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(108, 'Jordison', 'Joey', '1968-06-15', '2012-05-24', 001, 05);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(110, 'Portnoy', 'Mike', '1980-10-27', '2011-04-17', 001, 06);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(244, 'Bun', 'Kay', '1988-04-15-', '2008-09-21', 102, 02);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(245, 'Vai', 'Steve', '1985-02-12', '2013-11-16', 102,  02);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(284, 'Hofer', 'John', '1973-01-15', '2013-08-10', 104, 03);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(301, 'Russo', 'Billy', '1980-09-20', '2015-11-13', 110, 06);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(235, 'Esteves', 'Salena', '1991-02-23', '2014-10-18', 244, 02);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(217, 'Jacobs', 'Greg', '1989-09-03', '2011-09-06', 244, 02);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(219, 'Levine', 'Adam', '1985-03-25', '2013-03-27', 245, 02);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(220, 'Oliver', 'John', '1991-02-14', '2012-06-03', 245, 02);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(221, 'Bing', 'Chandler', '1992-01-01', '2016-05-12', 245, 02);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(267, 'Donn', 'Angel', '1988-04-28', '2010-11-14', 104, 03);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(291, 'Tribiani', 'Joey', '1971-06-18', '2011-07-21', 284, 03);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(292, 'Geller', 'Ross', '1971-09-24', '2013-07-17', 284, 03);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(400, 'Ikeda', 'Shelby', '1989-03-21', '2012-07-21', 106, 04);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(401, 'Green', 'Rachel', '1991-04-22', '2013-05-11', 106, 04);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(500, 'Hazard', 'Eden', '1989-03-21', '2013-09-12', 108, 05);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(501, 'Williams', 'Serena', '1984-02-07', '2014-12-23', 108, 05);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(600, 'Nehwal', 'Saina', '1984-05-16', '2011-05-05', 301, 06);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(601, 'Cooper', 'Sheldon', '1990-08-14', '2016-12-14', 301, 06);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(602, 'Rodriguez', 'Michelle', '1987-02-02', '2011-03-25', 110, 06);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(700, 'Ibrahimovic', 'Zlatan', '1970-03-16', '2006-05-05', 001, 01);
+INSERT INTO Employee (emp_id, emp_last, emp_first, DOB, hire_date, super_id, dept_code) VALUES(701, 'Kohli', 'Virat', '1972-09-24', '2007-08-14', 001, 01);
+
+-- Update DEPARTMENT Table
+
+UPDATE Department SET Manager_ID = 001 WHERE Dept_Code = 01;
+UPDATE Department SET Manager_ID = 102 WHERE Dept_Code = 02;
+UPDATE Department SET Manager_ID = 104 WHERE Dept_Code = 03;
+UPDATE Department SET Manager_ID = 106 WHERE Dept_Code = 04;
+UPDATE Department SET Manager_ID = 108 WHERE Dept_Code = 05;
+UPDATE Department SET Manager_ID = 110 WHERE Dept_Code = 06;
+
+-- TRAINING Table
+
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(099, 02, 102, '2011-08-02', 'Negotiation Strategies', '3 months training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(555, 07, 219, '2017-03-13', 'Database Management', '5 months training' );
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(100, 02, 284, '2014-01-02', 'Negotiation Strategies', '3 months training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(101, 02, 244, '2014-01-02', 'Negotiation Strategies', '3 months training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(103, 02, 221, '2017-01-15', 'Negotiation Strategies', '3 months training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(201, 05, 267, '2014-07-01', 'IT Project Management', '4 months training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(202, 05, 104, '2014-07-01', 'IT Project Management', '4 months training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(203, 05, 284, '2014-07-01', 'IT Project Management', '4 months training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(301, 04, 267, '2015-10-15', 'Technical Writing', '7 weeks training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(302, 04, 292, '2015-10-15', 'Technical Writing', '7 weeks training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(303, 04, 500, '2015-10-15', 'Technical Writing', '7 weeks training' );
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(401, 07, 217, '2015-03-13', 'Database Management', '5 months training' );
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(402, 07, 219, '2013-02-10', 'Database Management', '5 months training' );
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(411, 07, 219, '2014-02-10', 'Technical Writing', '7 weeks training' );
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(403, 07, 600, '2016-08-20', 'Database Management', '5 months training' );
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(404, 07, 291, '2016-08-20', 'Database Management', '5 months training' );
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(501, 01, 501, '2016-03-15', 'Professional Speaking', '3 weeks training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(506, 01, 400, '2016-03-15', 'Professional Speaking', '3 weeks training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(502, 01, 602, '2016-03-15', 'Professional Speaking', '3 weeks training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(503, 01, 221, '2017-07-01', 'Professional Speaking', '3 weeks training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(405, 07, 217, '2017-01-10', 'Database Management', '5 months training' );
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(406, 07, 600, '2017-01-10', 'Database Management', '5 months training' );
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(500, 03, 284, '2016-05-21', 'Python for developers', '5 months training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(601, 03, 291, '2017-05-15', 'Python for developers', '5 months training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(602, 03, 292, '2017-05-15', 'Python for developers', '5 months training');
+INSERT INTO Training (train_id, code, emp_id, date_acquired, name, comments) VALUES(603, 03, 501, '2017-05-15', 'Python for developers', '5 months training');
+
+-- CLIENT Table
+
+INSERT INTO Client (client_id, name, street, city, state, zip_code, industry, web_address, phone, contact_name) VALUES(101, 'General Electric', '3135 Easton Turnpike', 'Fairfield', 'CT', '06825', 'Conglomerate', 'www.ge.com', '203-373-2652', 'John Flannery');
+INSERT INTO Client (client_id, name, street, city, state, zip_code, industry, web_address, phone, contact_name) VALUES(102, 'Shutterfly', '2800 Bridge Parkway', 'Redwood City', 'CA', '94065', 'Manufacturing', 'www.shutterfly.com', '888-225-7159', 'Dan Baum');
+INSERT INTO Client (client_id, name, street, city, state, zip_code, industry, web_address, phone, contact_name) VALUES(103, 'Sabic', '2500 CityWest Blvd', 'Houston', 'TX', '77042', 'Manufacturing', 'www.sabic.com', '713-430-2300', 'Mohammed Almadhi');
+INSERT INTO Client (client_id, name, street, city, state, zip_code, industry, web_address, phone, contact_name) VALUES(104, 'Amazon', '410 Terry Ave', 'North Seattle', 'WA', '98109', 'Retail', 'www.amazon.com', '206-266-1000', 'Jordan Olsson');
+INSERT INTO Client (client_id, name, street, city, state, zip_code, industry, web_address, phone, contact_name) VALUES(105, 'Walmart', '703 S.W. Eighth St', 'Bentonville', 'AR', '72716', 'Retail', 'www.walmart.com', '800-925-6278', 'Karen Elsberry');
+INSERT INTO Client (client_id, name, street, city, state, zip_code, industry, web_address, phone, contact_name) VALUES(106, 'Goldman Sachs', '200 West St', 'New York', 'NY', '10282', 'Investment Banking', 'www.goldmansachs.com', '734-123-4782', 'Casey Neistat');
+INSERT INTO Client (client_id, name, street, city, state, zip_code, industry, web_address, phone, contact_name) VALUES(107, 'Ford', '100 One American Road', 'Dearborn', 'MI', '48126', 'Manufacturing', 'www.ford.com', '800-555-5259', 'Lucas Goodwin');
+INSERT INTO Client (client_id, name, street, city, state, zip_code, industry, web_address, phone, contact_name) VALUES(108, 'Target', '1000 Nicollet Mall', 'Minneapolis', 'MN', '55403', 'Retail', 'www.target.com', '612-314-7892', 'Selena Pritchett');
+INSERT INTO Client (client_id, name, street, city, state, zip_code, industry, web_address, phone, contact_name) VALUES(109, 'Morgan Stanley', '1585 Broadway', 'New York', 'NY', '10036', 'Investment Banking', 'www.morganstanley.com', '866-238-1238', 'Adam Sandler');
+INSERT INTO Client (client_id, name, street, city, state, zip_code, industry, web_address, phone, contact_name) VALUES(110, 'GAP Inc.', '2 Folsom St.', 'San Francisco', 'CA', '94105', 'Clothing', 'www.gapinc.com', '888-678-5675', 'Martin Tyler');
+
+-- PROJECT Table
+
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(101, 'Marketing for Shutterfly 15', '2015-02-15', 100000, 02, 102);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(102, 'IT Solution for GE 13', '2013-11-23', 700000, 03, 101);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(103, 'IT Solution for GE 16', '2016-01-06', 850000, 03, 101);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(104, 'Marketing for Shutterfly 16', '2016-06-11', 160000, 02, 102);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(105, 'IT Solution for Sabic 17', '2017-05-01', NULL, 03, 103);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(106, 'Hiring Drive for Amazon', '2017-08-24', NULL, 04, 104);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(107, 'IB solutions for GS', '2015-03-01', 1000000, 06, 106);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(108, 'IB Solutions for MS', '2016-10-01', 1100000, 06, 109);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(109, 'Shopping Research for GAP', '2015-06-01', 400000, 05, 110);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(110, 'Marketing solutions for GAP', '2017-10-01', NULL, 02, 110);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(111, 'Marketing solutions for Amazon', '2014-06-01', 200000, 02, 104);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(112, 'Marketing Research for Ford', '2017-09-01', NULL, 05, 107);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(113, 'Marketing for Shutterfly 16', '2016-02-15', 200000, 02, 102);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(114, 'IT Solution for Ford', '2016-03-01', 200000, 03, 107);
+INSERT INTO Project (proj_id, name, start_date, total_cost, dept_code, client_id) VALUES(115, 'Hiring Drive for Target', '2016-11-01', 150000, 04, 108);
+
+-- ASSIGNMENT Table
+
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(101, 101, 235, '2015-02-15', '2015-02-28', 50);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(102, 101, 235, '2015-03-01', '2015-03-25', 80);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(103, 101, 217, '2015-02-15', '2015-02-28', 50);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(104, 102, 267, '2013-11-23', '2013-11-30', 15);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(105, 102, 267, '2014-01-01', '2014-01-25', 80);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(106, 102, 291, '2013-11-23', '2013-11-30', 15);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(107, 102, 291, '2014-01-01', '2014-01-25', 80);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(108, 103, 292, '2016-01-06', '2016-01-29', 60);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(109, 103, 292, '2016-02-02', '2016-02-27', 100);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(110, 104, 219, '2016-06-11', '2016-06-28', 60);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(111, 104, 245, '2016-08-01', '2016-08-20', 30);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(112, 105, 267, '2017-05-01', '2017-05-25', 80);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(113, 105, 291, '2017-05-01', '2017-05-25', 80);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(114, 105, 291, '2017-06-01', '2017-06-25', 80);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(115, 105, 267, '2017-11-01', NULL, NULL);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(116, 106, 400, '2017-08-24', '2017-08-30', 15);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(117, 106, 400, '2017-11-01', NULL, NULL );
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(118, 107, 600, '2015-03-01', '2015-03-27', 100);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(119, 108, 601, '2016-10-01', '2016-10-28', 100);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(120, 109, 500, '2015-06-01', '2015-06-30', 80);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(121, 109, 500, '2015-07-01', '2015-07-30', 100);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(122, 110, 219, '2017-10-01', '2017-10-30', 70);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(123, 110, 245, '2017-10-01', '2017-10-30', 50);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(124, 110, 220, '2017-11-01', NULL, NULL);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(125, 110, 245, '2017-11-01', NULL, NULL);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(126, 111, 217, '2014-06-01', '2014-06-28', 80);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(127, 112, 501, '2017-09-01', '2017-09-25', 80);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(128, 112, 500, '2017-10-01', '2017-10-25', 80);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(129, 112, 501, '2017-11-01', NULL, NULL);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(130, 113, 219, '2016-02-15', '2016-02-28', 60);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(131, 113, 220, '2016-03-01', '2016-03-30', 150);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(132, 113, 102, '2016-02-15', '2016-02-28', 40);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(133, 113, 102, '2016-03-01', '2016-03-30', 100);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(134, 114, 104, '2016-03-01', '2016-03-30', 150);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(135, 114, 267, '2016-03-01', '2016-03-30', 100);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(136, 114, 104, '2016-06-01', '2016-06-20', 100);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(137, 114, 267, '2016-06-01', '2016-06-20', 80);
+INSERT INTO Assignment (assign_id, proj_id, emp_id, date_assigned, date_ended, hours_used) VALUES(138, 115, 401, '2016-11-01', '2016-11-25', 120);
+
+COMMIT;
