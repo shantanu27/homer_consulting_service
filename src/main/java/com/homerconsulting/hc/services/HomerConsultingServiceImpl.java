@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
 import java.util.Collection;
-import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -64,6 +63,24 @@ public class HomerConsultingServiceImpl implements HomerConsultingService {
                                                         .map(this::convertToBO  )
                                                         .collect(Collectors.toList()))
                             .orElseThrow(() ->new IllegalArgumentException("No employee with id '" + id + "'"));
+    }
+
+    @Override
+    public Collection<EmployeeBO> getEmployeesInProject(int id) throws IllegalArgumentException {
+        Optional<Project> projectEntity = projectService.getProjectEntity(id);
+        return projectEntity.map(project -> assignmentDao.findByProject(project)
+                                                    .stream()
+                                                    .map(assignment -> employeeService.convertToBO(assignment.getEmployee()))
+                                                    .distinct()
+                                                    .collect(Collectors.toList()))
+                        .orElseThrow(() -> new IllegalArgumentException("No project with id '" + id + "'"));
+    }
+
+    @Override
+    public Collection<EmployeeBO> getEmployeesForDepartment(int id) {
+        Optional<Department> departmentEntity = Optional.ofNullable(departmentDao.findOne(id));
+        return departmentEntity.map(department -> employeeService.getEmployees(department))
+                .orElseThrow(() -> new IllegalArgumentException("No department with id '" + id + "'"));
     }
 
     private AssignmentBO convertToBO(Assignment assignment) {

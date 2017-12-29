@@ -1,6 +1,7 @@
 package com.homerconsulting.hc.controllers;
 
 import com.homerconsulting.hc.bo.AssignmentBO;
+import com.homerconsulting.hc.bo.EmployeeBO;
 import com.homerconsulting.hc.bo.ProjectBO;
 import com.homerconsulting.hc.services.HomerConsultingService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,16 @@ public class HCController {
     @RequestMapping(path = "employee/{id}/assignments")
     public Collection<AssignmentBO> getEmployeeAssignments(@PathVariable(name = "id") int id) throws IllegalArgumentException{
         return homerConsultingService.getEmployeeAssignments(id);
+    }
+
+    @RequestMapping(path = "project/{id}/employees")
+    public Collection<EmployeeBO> getEmployeesInProject(@PathVariable(name = "id") int id) throws IllegalArgumentException{
+        return homerConsultingService.getEmployeesInProject(id);
+    }
+
+    @RequestMapping(path = "department/{id}/employees")
+    public Collection<EmployeeBO> getEmployeesForDepartment(@PathVariable(name = "id") int id) throws IllegalArgumentException {
+        return homerConsultingService.getEmployeesForDepartment(id);
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)

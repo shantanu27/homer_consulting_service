@@ -9,7 +9,6 @@ Intended outcomes:
         - get employee assignments,
         - get project assignments,
         - add training for employee
-        - calculate employee bonus
         - get employees per department
 2) Separation of business and implementation details
 3) Business use cases -

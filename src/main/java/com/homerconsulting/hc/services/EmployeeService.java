@@ -2,6 +2,7 @@ package com.homerconsulting.hc.services;
 
 import com.homerconsulting.hc.bo.EmployeeBO;
 import com.homerconsulting.hc.dao.EmployeeDao;
+import com.homerconsulting.hc.model.Department;
 import com.homerconsulting.hc.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,6 +40,13 @@ public class EmployeeService {
                     .map(this::convertToBO)
                     .collect(Collectors.toList());
         } else throw new NoSuchElementException("No such employee with id - " + id);
+    }
+
+    public Collection<EmployeeBO> getEmployees(Department department) {
+        return employeeDao.findByDepartment(department)
+                .stream()
+                .map(this::convertToBO)
+                .collect(Collectors.toList());
     }
 
     public EmployeeBO convertToBO(Employee employee) {

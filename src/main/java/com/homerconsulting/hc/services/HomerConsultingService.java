@@ -1,6 +1,7 @@
 package com.homerconsulting.hc.services;
 
 import com.homerconsulting.hc.bo.AssignmentBO;
+import com.homerconsulting.hc.bo.EmployeeBO;
 import com.homerconsulting.hc.bo.ProjectBO;
 import com.homerconsulting.hc.model.Employee;
 
@@ -13,4 +14,8 @@ public interface HomerConsultingService {
     ProjectBO updateProject(int id, double totalCost);
 
     Collection<AssignmentBO> getEmployeeAssignments(int id) throws IllegalArgumentException;
+
+    Collection<EmployeeBO> getEmployeesInProject(int id) throws IllegalArgumentException;
+
+    Collection<EmployeeBO> getEmployeesForDepartment(int id);
 }

@@ -30,6 +30,10 @@ public class ProjectService {
         return Optional.ofNullable(project).map(this::convertToBO);
     }
 
+    public Optional<Project> getProjectEntity(int id) {
+        return Optional.ofNullable(projectDao.findOne(id));
+    }
+
     public Collection<ProjectBO> getActiveProjects() {
         List<Project> projects = new ArrayList<>();
         projectDao.findAll().forEach(projects::add);
