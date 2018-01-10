@@ -1,12 +1,12 @@
-# Homer Consulting Microservice
+# Homer Consulting Web Service
 
 We did a small project in our *Database Management* course where we had to create a database, insert data, and run several 
-fairly complex queries. I decided to brush-up my [Spring](https://projects.spring.io/spring-boot/) knowledge and used data from that project to create a microservice.
+fairly complex queries. I decided to brush-up my [Spring](https://projects.spring.io/spring-boot/) knowledge and used data from that project to create a web service.
 It was fun, and learned new things too along the way!
 
 ### Steps to Run Locally
 
-This microservice is built using [Spring](https://projects.spring.io/spring-boot/) and the build tool is 
+This webs service is built using [Spring Boot](https://projects.spring.io/spring-boot/) and the build tool is 
 [Gradle](https://gradle.org/). However, you don't need to have *Gradle* installed. *Gradle wrapper* is included with the project
 which can be used to download the necessary libraries and build the project. 
 
